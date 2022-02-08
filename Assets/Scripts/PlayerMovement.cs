@@ -6,10 +6,19 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpSpeed;
-    // Start is called before the first frame update
+
+    public Sprite sprite1;
+    public Sprite sprite2;
+
+    private SpriteRenderer spriteRenderer;
+   
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.sprite == null)
+        {
+            spriteRenderer.sprite = sprite1;
+        }
     }
 
     // Update is called once per frame
@@ -30,5 +39,23 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
             
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            ChangeSprite();
+        }
+        
     }
+
+    void ChangeSprite()
+    {
+        if (spriteRenderer.sprite == sprite1)
+        {
+            spriteRenderer.sprite = sprite2;
+        }
+        else
+        {
+            spriteRenderer.sprite = sprite1;
+        }
+    }
+    
 }

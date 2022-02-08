@@ -2213,6 +2213,7 @@ GameObject:
   - component: {fileID: 656845237}
   - component: {fileID: 656845239}
   - component: {fileID: 656845238}
+  - component: {fileID: 656845240}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -2281,6 +2282,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656845236}
   m_CullTransparentMesh: 1
+--- !u!114 &656845240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656845236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2322c7207e0ad41abb437c44210d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &703145509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3992,6 +4005,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   jumpSpeed: 50
+  sprite1: {fileID: 21300000, guid: f4af48ac2981e0d46853d420c82f4f8a, type: 3}
+  sprite2: {fileID: 21300000, guid: 6add71352a3f3a44d91ab2f359fe2c52, type: 3}
 --- !u!50 &1022228389
 Rigidbody2D:
   serializedVersion: 4
@@ -7443,7 +7458,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
